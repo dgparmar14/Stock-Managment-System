@@ -5,8 +5,8 @@ const { MongoClient } = require("mongodb");
 
 export async function GET(request) {
 
-  const uri = "mongodb+srv://dgparmar1406:Ik6CnA0C0wfGYDiW@stcok-managment.sdarjny.mongodb.net/  ";
-  const client = new MongoClient(uri);
+  // const uri = "mongodb+srv://dgparmar1406:Ik6CnA0C0wfGYDiW@stcok-managment.sdarjny.mongodb.net/";
+  const client = new MongoClient(process.env.MONGODB_URL);
 
   try {
 
@@ -30,8 +30,8 @@ export async function POST(request) {
 
   let body = await request.json();
 
-  const uri = "mongodb+srv://user2:hDGOZrbuymVIuE8W@stcok-managment.sdarjny.mongodb.net/";
-  const client = new MongoClient(uri);
+  // const uri = "mongodb+srv://user2:hDGOZrbuymVIuE8W@stcok-managment.sdarjny.mongodb.net/";
+  const client = new MongoClient(process.env.MONGODB_URL);
 
   try {
 

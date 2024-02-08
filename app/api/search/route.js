@@ -8,8 +8,8 @@ export async function GET(request) {
 
     const query = request.nextUrl.searchParams.get("query");
 
-    const uri = "mongodb+srv://dgparmar1406:Ik6CnA0C0wfGYDiW@stcok-managment.sdarjny.mongodb.net/";
-    const client = new MongoClient(uri);
+    // const uri = "mongodb+srv://dgparmar1406:Ik6CnA0C0wfGYDiW@stcok-managment.sdarjny.mongodb.net/";
+    const client = new MongoClient(process.env.MONGODB_URL);
     try {
 
         const database = client.db('Dhrumit');

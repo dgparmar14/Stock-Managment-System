@@ -7,8 +7,8 @@ export async function POST(request) {
     console.log("hello from action");
     let { action, slug, intitialquantity } = await request.json();
     let r = request;
-    const uri = "mongodb+srv://user2:hDGOZrbuymVIuE8W@stcok-managment.sdarjny.mongodb.net/";
-    const client = new MongoClient(uri);
+    // const uri = "mongodb+srv://user2:hDGOZrbuymVIuE8W@stcok-managment.sdarjny.mongodb.net/";
+    const client = new MongoClient(process.env.MONGODB_URL);
 
     try {
 
